@@ -3,8 +3,8 @@ class Slingshot{
         var options = {
             bodyA: bodyA,
             pointB: pointB,
-            stiffness: 0.01,
-            length: 10
+            stiffness: 0.004,
+            length: 20
         }
 
         this.slingshot = Constraint.create(options);
@@ -22,5 +22,9 @@ class Slingshot{
 
     release(){
         this.slingshot.bodyA = null;
+    }
+
+    launcher(){
+        this.slingshot.bodyA = stone.body;
     }
 }
